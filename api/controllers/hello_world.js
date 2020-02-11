@@ -39,13 +39,15 @@ function hello(req, res) {
   var name = req.swagger.params.name.value || 'stranger';
   var test = req.swagger.params.test.value;
   var hello = util.format('Hello, %s!', name);
+  var hello2 = util.format('Hello, %s!', test);
 
   // See calls
   console.log('=== NodeMCU ' + name + ' ===');
 
   // this sends back a JSON response which is a single string
-  tmp = {"name" : name, "test": test};
-  res.json(tmp);
+  
+  res.json(hello);
+  res.json(hello2)
 }
 
 
