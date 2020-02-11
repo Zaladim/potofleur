@@ -31,6 +31,11 @@ paths:
           description: The name of the person to whom to say hello
           required: false
           type: string
+        - name: test
+          in: query
+          description: The name of the person to whom to say hello
+          required: false
+          type: string
       responses:
         "200":
           description: Success
