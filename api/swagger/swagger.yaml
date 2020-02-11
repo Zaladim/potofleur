@@ -34,7 +34,7 @@ paths:
         - name: test
           in: query
           description: The name of the person to whom to say hello
-          required: false
+          required: true
           type: string
       responses:
         "200":
