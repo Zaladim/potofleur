@@ -44,8 +44,8 @@ function hello(req, res) {
   console.log('=== NodeMCU ' + name + ' ===');
 
   // this sends back a JSON response which is a single string
-  res = {"name" : name, "test": test};
-  // res.json(hello);
+  tmp = {"name" : name, "test": test};
+  res.json(tmp);
 }
 
 
