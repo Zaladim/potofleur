@@ -83,13 +83,13 @@ var firebaseConfig = {
 
 function hello(req, res) {
   // variables defined in the Swagger document can be referenced using req.swagger.params.{parameter_name}
-  // var name = req.swagger.params.name.value || 'stranger';
+  var name = req.swagger.params.name.value || 'Kiwi';
   // var test = req.swagger.params.test.value;
   var id = req.swagger.params.id.value;
   var lum = req.swagger.params.lum.value;
   var temp = req.swagger.params.temp.value;
   var hum = req.swagger.params.hum.value;
-  // var hello = util.format('Kiwi, %s!', test);
+  var hello = util.format('Kiwi, %s!', name);
   // var hello2 = util.format('Hello, %s!', test);
 
   // See calls
@@ -141,7 +141,7 @@ function hello(req, res) {
   // res = {"Kiwi": hello};
 
 
-  res.json(util.format(id));
+  res.json(hello);
 
 }
 
