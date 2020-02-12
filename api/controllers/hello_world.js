@@ -61,30 +61,30 @@ module.exports = {
 
 
 // import * as firebase from 'firebase/app'
-// var firebase = require('firebase/app')
-// require('firebase/auth')
-// require('firebase/firestore')
-// require('firebase/storage')
+var firebase = require('firebase/app')
+require('firebase/auth')
+require('firebase/firestore')
+require('firebase/storage')
 
-// var firebase = require('firebase/app')
+var firebase = require('firebase/app')
 
-// var firebaseConfig = {
-//     apiKey: "AIzaSyDXZamprRa_OQ_-pw3KPaHD_vnl_j8RO4Y",
-//     authDomain: "potofleur-56855.firebaseapp.com",
-//     databaseURL: "https://potofleur-56855.firebaseio.com",
-//     projectId: "potofleur-56855",
-//     storageBucket: "potofleur-56855.appspot.com",
-//     messagingSenderId: "99197670423",
-//     appId: "1:99197670423:web:2dbae836ae9f641f973852",
-//     measurementId: "G-R2Z7BQB6TY"
-//   }
-//   // Initialize Firebase
-//   firebase.initializeApp(firebaseConfig)
+var firebaseConfig = {
+    apiKey: "AIzaSyDXZamprRa_OQ_-pw3KPaHD_vnl_j8RO4Y",
+    authDomain: "potofleur-56855.firebaseapp.com",
+    databaseURL: "https://potofleur-56855.firebaseio.com",
+    projectId: "potofleur-56855",
+    storageBucket: "potofleur-56855.appspot.com",
+    messagingSenderId: "99197670423",
+    appId: "1:99197670423:web:2dbae836ae9f641f973852",
+    measurementId: "G-R2Z7BQB6TY"
+  }
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig)
 
 function hello(req, res) {
   // variables defined in the Swagger document can be referenced using req.swagger.params.{parameter_name}
-  var name = req.swagger.params.name.value || 'Kiwi';
-  var hello = util.format('Kiwi, %s!', name);
+  // var name = req.swagger.params.name.value || 'Kiwi';
+  // var hello = util.format('Kiwi, %s!', name);
 
   // var test = req.swagger.params.test.value;
   var id = req.swagger.params.id.value;
@@ -142,7 +142,7 @@ function hello(req, res) {
   // res = {"Kiwi": hello};
 
 
-  res.json(hello);
+  res.json(id);
 
 }
 
