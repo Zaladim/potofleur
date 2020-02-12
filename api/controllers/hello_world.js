@@ -61,49 +61,50 @@ module.exports = {
 
 
 // import * as firebase from 'firebase/app'
-var firebase = require('firebase/app')
-require('firebase/auth')
-require('firebase/firestore')
-require('firebase/storage')
+// var firebase = require('firebase/app')
+// require('firebase/auth')
+// require('firebase/firestore')
+// require('firebase/storage')
 
-var firebase = require('firebase/app')
+// var firebase = require('firebase/app')
 
-var firebaseConfig = {
-    apiKey: "AIzaSyDXZamprRa_OQ_-pw3KPaHD_vnl_j8RO4Y",
-    authDomain: "potofleur-56855.firebaseapp.com",
-    databaseURL: "https://potofleur-56855.firebaseio.com",
-    projectId: "potofleur-56855",
-    storageBucket: "potofleur-56855.appspot.com",
-    messagingSenderId: "99197670423",
-    appId: "1:99197670423:web:2dbae836ae9f641f973852",
-    measurementId: "G-R2Z7BQB6TY"
-  }
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig)
+// var firebaseConfig = {
+//     apiKey: "AIzaSyDXZamprRa_OQ_-pw3KPaHD_vnl_j8RO4Y",
+//     authDomain: "potofleur-56855.firebaseapp.com",
+//     databaseURL: "https://potofleur-56855.firebaseio.com",
+//     projectId: "potofleur-56855",
+//     storageBucket: "potofleur-56855.appspot.com",
+//     messagingSenderId: "99197670423",
+//     appId: "1:99197670423:web:2dbae836ae9f641f973852",
+//     measurementId: "G-R2Z7BQB6TY"
+//   }
+//   // Initialize Firebase
+//   firebase.initializeApp(firebaseConfig)
 
 function hello(req, res) {
   // variables defined in the Swagger document can be referenced using req.swagger.params.{parameter_name}
   var name = req.swagger.params.name.value || 'Kiwi';
-  // var test = req.swagger.params.test.value;
-  var id = req.swagger.params.id.value;
-  var lum = req.swagger.params.lum.value;
-  var temp = req.swagger.params.temp.value;
-  var hum = req.swagger.params.hum.value;
   var hello = util.format('Kiwi, %s!', name);
-  // var hello2 = util.format('Hello, %s!', test);
 
-  // See calls
-  // console.log('=== NodeMCU ' + name + ' ===');
-  // console.log('=== NodeMCU ' + test + ' ===');
+  // var test = req.swagger.params.test.value;
+  // var id = req.swagger.params.id.value;
+  // var lum = req.swagger.params.lum.value;
+  // var temp = req.swagger.params.temp.value;
+  // var hum = req.swagger.params.hum.value;
+  // // var hello2 = util.format('Hello, %s!', test);
 
-  firebase.firestore().collection("AllArduino").doc(id).set({
-    lum: lum,
-    temp: temp,
-    hum: hum
-    // expected_temp: this.state.txtTemp,
-    // expected_hum: this.state.txtHum,
-    // expected_lum: this.state.txtLum
-  })
+  // // See calls
+  // // console.log('=== NodeMCU ' + name + ' ===');
+  // // console.log('=== NodeMCU ' + test + ' ===');
+
+  // firebase.firestore().collection("AllArduino").doc(id).set({
+  //   lum: lum,
+  //   temp: temp,
+  //   hum: hum
+  //   // expected_temp: this.state.txtTemp,
+  //   // expected_hum: this.state.txtHum,
+  //   // expected_lum: this.state.txtLum
+  // })
 
   // const admin = require('../../node_modules/firebase-admin');
   // const serviceAccount = require("./serviceAccountKey.json");
