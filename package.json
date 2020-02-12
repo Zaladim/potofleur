@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/zaladim/potofleur/issues"
   },
-  "homepage": "https://github.com/zaladim/potofleur#readme"
+  "homepage": "https://github.com/zaladim/potofleur#readme",
+  "dependencies": {
+    "sails": "^1.2.3"
+  }
 }
