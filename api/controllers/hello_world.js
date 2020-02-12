@@ -87,24 +87,24 @@ function hello(req, res) {
   var hello = util.format('Kiwi, %s!', name);
 
   // var test = req.swagger.params.test.value;
-  // var id = req.swagger.params.id.value;
-  // var lum = req.swagger.params.lum.value;
-  // var temp = req.swagger.params.temp.value;
-  // var hum = req.swagger.params.hum.value;
-  // // var hello2 = util.format('Hello, %s!', test);
+  var id = req.swagger.params.id.value;
+  var lum = req.swagger.params.lum.value;
+  var temp = req.swagger.params.temp.value;
+  var hum = req.swagger.params.hum.value;
+  // var hello2 = util.format('Hello, %s!', test);
 
-  // // See calls
-  // // console.log('=== NodeMCU ' + name + ' ===');
-  // // console.log('=== NodeMCU ' + test + ' ===');
+  // See calls
+  // console.log('=== NodeMCU ' + name + ' ===');
+  // console.log('=== NodeMCU ' + test + ' ===');
 
-  // firebase.firestore().collection("AllArduino").doc(id).set({
-  //   lum: lum,
-  //   temp: temp,
-  //   hum: hum
-  //   // expected_temp: this.state.txtTemp,
-  //   // expected_hum: this.state.txtHum,
-  //   // expected_lum: this.state.txtLum
-  // })
+  firebase.firestore().collection("AllArduino").doc(id).set({
+    lum: lum,
+    temp: temp,
+    hum: hum
+    // expected_temp: this.state.txtTemp,
+    // expected_hum: this.state.txtHum,
+    // expected_lum: this.state.txtLum
+  })
 
   // const admin = require('../../node_modules/firebase-admin');
   // const serviceAccount = require("./serviceAccountKey.json");
