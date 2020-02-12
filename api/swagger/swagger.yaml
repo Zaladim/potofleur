@@ -26,12 +26,22 @@ paths:
       # used as the method name of the controller
       operationId: hello
       parameters:
-        - name: name
+        - name: id
           in: query
           description: The name of the person to whom to say hello
-          required: false
+          required: true
           type: string
-        - name: test
+        - name: lum
+          in: query
+          description: The name of the person to whom to say hello
+          required: true
+          type: string
+        - name: temp
+          in: query
+          description: The name of the person to whom to say hello
+          required: true
+          type: string
+        - name: hum
           in: query
           description: The name of the person to whom to say hello
           required: true
@@ -39,6 +49,15 @@ paths:
       responses:
         "200":
           description: Success
+          # content:
+          #   application/json:
+          #     schema:
+          #       type: object
+          #       properties:
+          #         name:
+          #           type: string
+          #         test:          # <-- image embedded into JSON
+          #           type: string
           schema:
             # a pointer to a definition
             $ref: "#/definitions/HelloWorldResponse"
