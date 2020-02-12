@@ -141,7 +141,7 @@ function hello(req, res) {
   // res = {"Kiwi": hello};
 
 
-  res.json(id)
+  res.json(util.format(id);
 
 }
 
