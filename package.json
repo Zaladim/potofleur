@@ -4,8 +4,8 @@
   "private": true,
   "description": "New Swagger API Project",
   "keywords": [],
-  "author": "",
-  "license": "",
+  "author": "Zaladim",
+  "license": "ISC",
   "main": "app.js",
   "dependencies": {
     "@google-cloud/firestore": "^3.5.0",
@@ -38,5 +38,16 @@
     "start": "node app.js",
     "debug": "node debug app.js",
     "test": "swagger project test"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zaladim/potofleur.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zaladim/potofleur/issues"
+  },
+  "homepage": "https://github.com/zaladim/potofleur#readme"
 }
