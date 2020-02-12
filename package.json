@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/zaladim/potofleur#readme",
   "dependencies": {
-    "sails": "^1.2.3"
+    "sails": "^1.2.3",
+    "sails-hook-grunt": "^4.0.1"
   }
 }
