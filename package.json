@@ -38,5 +38,9 @@
     "start": "node app.js",
     "debug": "node debug app.js",
     "test": "swagger project test"
+  },
+  "engines": {
+    "node": "10.17.0"
   }
+
 }
