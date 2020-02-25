@@ -97,7 +97,7 @@ function hello(req, res) {
   // console.log('=== NodeMCU ' + name + ' ===');
   // console.log('=== NodeMCU ' + test + ' ===');
 
-  firebase.firestore().collection("AllArduino").doc(id).set({
+  firebase.firestore().collection("AllData").doc(id).set({
     lum: lum,
     temp: temp,
     hum: hum
